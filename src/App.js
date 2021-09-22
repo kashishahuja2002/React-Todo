@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Component} from "react";
 import './App.css';
 
 // Importing components
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
+
+// import http from "./services/httpService";
 
 function App()
 {
@@ -13,6 +15,14 @@ function App()
     const [filtered, setFiltered] = useState([]);
     const [inputType, setInputType] = useState("Add");
 
+    
+    // useEffect( () => {
+    //     http.get("https://jsonplaceholder.typicode.com/todos").then(res => {
+    //         console.log(res.data)
+    //         setTodos(res.data);
+    //     })
+    // }, []);
+        
     useEffect ( () => {filterHandler();}, [todos, status]);
 
     const filterHandler = () => {

@@ -11,7 +11,7 @@ const TodoList = ({filtered, setTodos, todos, setInputText, inputType, setInputT
                     (<Todo 
                         key={item.id} 
                         item={item}
-                        text={item.text}
+                        title={item.title}
                         setTodos={setTodos}
                         todos={todos}
                         setInputText={setInputText}
